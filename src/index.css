@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.rx-player-root {
+  min-width: 100%;
+  min-height: 100%;
+
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-sidebar-class {
+  z-index: 2;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  transition: transform 0.3s ease-out 0s;
+  will-change: transform;
+  /* overflow-y: auto; */
+  overflow-x: hidden;
+  left: 0px;
+  transform: translateX(-100%);
+  box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 4px;
+  background-color: #331165;
+  color: white;
+  font-size: 12px;
+}
+
+.isOpen {
+  transform: translateX(0%) !important;
+}
+
+.first-child-sidebar {
+  width: 256px;
+  height: 100%;
+}
